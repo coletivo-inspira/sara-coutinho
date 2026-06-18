@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Sara Coutinho, Psicóloga CRP 06/231897, com anamnese dinâmica, cadastro inicial, agenda visual e contato pelo WhatsApp.">
+  <title>Sara Coutinho | Psicóloga CRP 06/231897</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-lockup">
+        <span class="brand-mark">SC</span>
+        <div>
+          <p class="brand-name">Sara Coutinho</p>
+          <p class="brand-meta">Psicóloga • CRP 06/231897</p>
+        </div>
+      </div>
+      <nav class="header-actions" aria-label="Atalhos rápidos">
+        <a class="ghost-link" href="#anamnese-stage">Começar triagem</a>
+        <a class="ghost-link" href="#agenda-stage">Agendar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Psicologia clínica com foco em vínculo, clareza e cuidado</p>
+          <h1>Um espaço acolhedor para olhar com delicadeza para o que pesa hoje.</h1>
+          <p class="hero-text">
+            Um percurso simples, discreto e humano para iniciar o atendimento, organizar seu cadastro e encontrar um horário que faça sentido para você.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#anamnese-stage">Iniciar triagem</a>
+            <a class="secondary-link" href="#cadastro-stage">Ver cadastro</a>
+          </div>
+          <ul class="hero-points" aria-label="Diferenciais do atendimento">
+            <li>Acolhimento sem pressa</li>
+            <li>Fluxo simples e objetivo</li>
+            <li>Privacidade e discrição</li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel" aria-label="Resumo da jornada">
+          <h2>Como funciona</h2>
+          <div class="panel-card">
+            <p class="panel-step">1. Triagem guiada</p>
+            <p>Uma pergunta por vez, com respostas rápidas e sem formulário pesado.</p>
+          </div>
+          <div class="panel-card">
+            <p class="panel-step">2. Cadastro inicial</p>
+            <p>Dados básicos, consentimento LGPD e campos condicionais para maior segurança.</p>
+          </div>
+          <div class="panel-card">
+            <p class="panel-step">3. Agenda visual</p>
+            <p>Escolha um bloco de horário de forma clara, elegante e sem depender de iframe.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="anamnese-stage" class="stage-section">
+      <div class="container stage-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Etapa 1</p>
+          <h2>Anamnese dinâmica</h2>
+          <p>Responda com calma. O fluxo muda de acordo com o que você informar.</p>
+        </div>
+
+        <div class="progress-rail" aria-label="Etapas do fluxo">
+          <span class="progress-pill is-active" data-progress="anamnese">Anamnese</span>
+          <span class="progress-pill" data-progress="cadastro">Cadastro</span>
+          <span class="progress-pill" data-progress="agenda">Agenda</span>
+        </div>
+
+        <div class="question-shell">
+          <div id="question-container" class="question-container" aria-live="polite" aria-atomic="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cadastro-stage" class="stage-section is-hidden">
+      <div class="container stage-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Etapa 2</p>
+          <h2>Cadastro inicial</h2>
+          <p>Os dados são usados apenas para organização do atendimento e contato quando necessário.</p>
+        </div>
+
+        <form id="cadastro-form" class="card-form" novalidate>
+          <div class="form-grid">
+            <label class="field">
+              <span>Nome completo *</span>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Digite seu nome completo" required>
+            </label>
+
+            <label class="field">
+              <span>Data de nascimento *</span>
+              <input id="birthDate" name="birthDate" type="date" required>
+            </label>
+
+            <label class="field">
+              <span>Telefone *</span>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999" required>
+            </label>
+
+            <label class="field">
+              <span>E-mail</span>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com">
+            </label>
+
+            <label class="field field-split">
+              <span>Estado *</span>
+              <select id="stateSelect" name="stateSelect" required>
+                <option value="">Selecione</option>
+              </select>
+            </label>
+
+            <label class="field field-split">
+              <span>Cidade *</span>
+              <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Sua cidade" required>
+            </label>
+          </div>
+
+          <fieldset class="fieldset-block">
+            <legend>É sua primeira experiência em psicoterapia? *</legend>
+            <div class="option-row compact">
+              <label class="radio-chip"><input type="radio" name="therapyExperience" value="sim"> Sim</label>
+              <label class="radio-chip"><input type="radio" name="therapyExperience" value="nao"> Não</label>
+            </div>
+          </fieldset>
+
+          <div class="form-grid">
+            <label class="field field-full">
+              <span>Contato de emergência *</span>
+              <input id="emergencyContact" name="emergencyContact" type="text" placeholder="Nome e parentesco" required>
+            </label>
+
+            <label class="field field-full">
+              <span>Telefone do contato de emergência *</span>
+              <input id="emergencyPhone" name="emergencyPhone" type="tel" inputmode="tel" placeholder="(11) 99999-9999" required>
+            </label>
+          </div>
+
+          <fieldset class="fieldset-block">
+            <legend>O paciente tem menos de 18 anos? *</legend>
+            <div class="option-row compact">
+              <label class="radio-chip"><input type="radio" name="isMinor" value="sim"> Sim</label>
+              <label class="radio-chip"><input type="radio" name="isMinor" value="nao"> Não</label>
+            </div>
+          </fieldset>
+
+          <div id="guardian-fields" class="guardian-fields is-hidden" aria-live="polite">
+            <div class="form-grid">
+              <label class="field field-full">
+                <span>Nome do responsável *</span>
+                <input id="guardianName" name="guardianName" type="text" placeholder="Nome completo do responsável">
+              </label>
+
+              <label class="field field-split">
+                <span>Parentesco *</span>
+                <select id="guardianRelation" name="guardianRelation">
+                  <option value="">Selecione</option>
+                  <option value="mae">Mãe</option>
+                  <option value="pai">Pai</option>
+                  <option value="tutor">Tutor</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </label>
+
+              <label class="field field-split">
+                <span>Telefone do responsável *</span>
+                <input id="guardianPhone" name="guardianPhone" type="tel" inputmode="tel" placeholder="(11) 99999-9999">
+              </label>
+            </div>
+          </div>
+
+          <label class="consent-card">
+            <input id="lgpdConsent" name="lgpdConsent" type="checkbox" required>
+            <span>
+              Li e concordo com o tratamento dos meus dados para fins de atendimento psicológico, conforme a LGPD.
+            </span>
+          </label>
+
+          <p class="support-text">
+            O envio será liberado apenas após o aceite do consentimento e a validação dos campos obrigatórios.
+          </p>
+
+          <div class="form-actions">
+            <button type="submit" class="primary-button">Continuar para a agenda</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="agenda-stage" class="stage-section is-hidden">
+      <div class="container stage-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Etapa 3</p>
+          <h2>Agenda visual</h2>
+          <p>Escolha um bloco de horário preferencial. A confirmação final seguirá no WhatsApp com um protocolo discreto.</p>
+        </div>
+
+        <div class="calendar-container">
+          <div class="calendar-topline">
+            <div>
+              <p class="calendar-kicker">Disponibilidade sugerida</p>
+              <h3>Selecione apenas um horário</h3>
+            </div>
+            <button type="button" id="openOfficialCalendar" class="soft-button">Abrir agenda oficial</button>
+          </div>
+
+          <div id="schedule-grid" class="schedule-grid" role="listbox" aria-label="Horários disponíveis"></div>
+
+          <div class="calendar-note">
+            <p>
+              O layout acima é uma camada visual interna. A escolha será incorporada ao protocolo discreto e enviada ao WhatsApp.
+            </p>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="generateProtocol" class="primary-button">Quero seguir com meu agendamento</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="final-stage" class="stage-section is-hidden">
+      <div class="container stage-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Confirmação</p>
+          <h2>Seu protocolo foi gerado</h2>
+          <p>Uma confirmação curta aparece abaixo, junto do protocolo discreto que pode ser copiado antes do envio.</p>
+        </div>
+
+        <div class="final-card">
+          <p class="final-message">Tudo pronto. Agora você pode copiar seu protocolo ou abrir o WhatsApp para seguir com o atendimento.</p>
+          <pre id="protocol-output" class="protocol-output" aria-label="Protocolo discreto"></pre>
+          <div class="final-actions">
+            <button type="button" id="copyProtocol" class="soft-button">Copiar protocolo</button>
+            <a id="whatsappLink" class="whatsapp-cta" href="https://api.whatsapp.com/send/?phone=5511920177895&text=&type=phone_number&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer">Abrir WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a id="floatingWhatsapp" class="floating-whatsapp is-hidden" href="https://api.whatsapp.com/send/?phone=5511920177895&text=&type=phone_number&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+    <span class="whatsapp-mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+        <path d="M20.5 3.5A11.6 11.6 0 0 0 12.1 0C5.7 0 .5 5.1.5 11.4c0 2.2.6 4.4 1.8 6.3L0 24l6.5-2.2a11.6 11.6 0 0 0 5.6 1.4h.1c6.4 0 11.6-5.1 11.6-11.4 0-3.1-1.2-6-3.3-8.2ZM12.2 21.2h-.1a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.9 1.3 1.3-3.8-.2-.4A9.6 9.6 0 0 1 2.5 11.4c0-5.4 4.5-9.8 9.6-9.8 2.6 0 5.1 1 6.9 2.8a9.3 9.3 0 0 1 2.9 6.8c0 5.4-4.5 9.8-9.7 9.8Zm5.6-7.2c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2l-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.4 9.1 9.1 0 0 1-1.7-2.1c-.2-.3 0-.5.2-.7l.4-.4c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6 0-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1 1-1 2.4 0 1.4 1 2.7 1.1 2.9.2.2 1.9 3 4.8 4.1.7.3 1.2.4 1.6.5.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3Z"/>
+      </svg>
+    </span>
+    <span>WhatsApp</span>
+  </a>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p id="footerCrp" class="footer-brand">Sara Coutinho | CRP 06/231897</p>
+        <p class="footer-text">Atendimento psicológico com foco em vínculo, ética e discrição.</p>
+      </div>
+      <div>
+        <p class="footer-brand">Contato ético</p>
+        <p class="footer-text">WhatsApp organizado via protocolo discreto. Em caso de urgência, procure atendimento emergencial local.</p>
+      </div>
+      <section id="decoderVault" class="decoder-vault is-hidden" aria-label="Área interna">
+        <div class="decoder-head">
+          <p class="decoder-title">Acesso interno</p>
+          <button type="button" id="closeDecoder" class="decoder-mini-button">Fechar</button>
+        </div>
+        <div id="decoderGate" class="decoder-gate">
+          <label class="field field-full">
+            <span>Código interno</span>
+            <input id="decoderPin" type="password" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="6 dígitos">
+          </label>
+          <div class="decoder-actions">
+            <button type="button" id="unlockDecoder" class="decoder-mini-button">Liberar</button>
+          </div>
+          <p id="decoderGateStatus" class="decoder-gate-status" aria-live="polite"></p>
+        </div>
+        <div class="decoder-inner">
+          <label class="field field-full">
+            <span>Protocolo recebido</span>
+            <textarea id="decoderInput" rows="4" placeholder="Cole o protocolo"></textarea>
+          </label>
+          <div class="decoder-actions">
+            <button type="button" id="decodeButton" class="decoder-mini-button">Decodificar</button>
+            <button type="button" id="fillCurrentProtocol" class="decoder-mini-ghost">Usar atual</button>
+          </div>
+          <div id="decoderOutput" class="decoder-output" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
